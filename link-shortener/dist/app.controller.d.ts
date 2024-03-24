@@ -10,7 +10,7 @@ interface ErrorResponse {
 export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
-    getHello(): string;
+    getWelcome(): string;
     shorten(url: string): Observable<ShortenResponse | ErrorResponse>;
     retrieveAndRedirect(hash: any): Observable<{
         url: string;

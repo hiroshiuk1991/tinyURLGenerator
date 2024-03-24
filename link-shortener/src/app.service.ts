@@ -8,8 +8,8 @@ export class AppService {
     @Inject(AppRepositoryTag) private readonly appRepository: AppRepository,
   ) {}
 
-  getHello(): string {
-    return 'Hello World!';
+  getWelcome(): string {
+    return 'Welcome to url shortner!';
   }
 
   shorten(url: string): Observable<string> {

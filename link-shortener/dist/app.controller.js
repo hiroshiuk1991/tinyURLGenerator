@@ -20,8 +20,8 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    getHello() {
-        return this.appService.getHello();
+    getWelcome() {
+        return this.appService.getWelcome();
     }
     shorten(url) {
         if (!url) {
@@ -42,7 +42,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
-], AppController.prototype, "getHello", null);
+], AppController.prototype, "getWelcome", null);
 __decorate([
     (0, common_1.Post)('shorten'),
     __param(0, (0, common_1.Body)('url')),

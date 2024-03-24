@@ -20,8 +20,8 @@ let AppService = class AppService {
     constructor(appRepository) {
         this.appRepository = appRepository;
     }
-    getHello() {
-        return 'Hello World!';
+    getWelcome() {
+        return 'Welcome to url shortner!';
     }
     shorten(url) {
         const hash = Math.random().toString(36).slice(7);

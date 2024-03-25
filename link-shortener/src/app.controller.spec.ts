@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { AppRepositoryTag } from './app.repository';
 import { AppRepositoryHashmap } from './app.repository.hashmap';
 import { of } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -25,7 +24,7 @@ describe('AppController', () => {
 
   describe('shorten', () => {
     it('should return a valid hash for a valid URL', (done) => {
-      const url = 'https://aerabi.com';
+      const url = 'https://pokemon.com';
       const hash = 'abc123';
       jest.spyOn(appService, 'shorten').mockReturnValue(of(hash));
 
@@ -57,7 +56,7 @@ describe('AppController', () => {
   describe('retrieveAndRedirect', () => {
     it('should redirect to the correct URL for a valid hash', (done) => {
       const hash = 'abc123';
-      const url = 'https://aerabi.com';
+      const url = 'https://pokemon.com';
       jest.spyOn(appService, 'retrieve').mockReturnValue(of(url));
 
       appController.retrieveAndRedirect(hash).subscribe({

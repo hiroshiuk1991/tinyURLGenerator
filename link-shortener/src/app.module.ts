@@ -9,7 +9,7 @@ import { AppRepositoryRedis } from './app.repository.redis';
   controllers: [AppController],
   providers: [
     AppService,
-    { provide: AppRepositoryTag, useClass: AppRepositoryRedis }, // <-- here
+    { provide: AppRepositoryTag, useClass: AppRepositoryRedis },
   ],
 })
 export class AppModule {}
